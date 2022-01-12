@@ -11,13 +11,13 @@ class Admin {
       
        $this->_mail="";
        $this->_mdp="";
-       $this->_db=connextion();
+       $this->_db=new Database();
     }
 
     public function getAllAlumni(){
-        $pdo=connexion();
+        $pdo=$this ->_db;
         // to do :add table in sql
-        $sth = $pdo->prepare("SELECT * FROM ");
+        $sth = $pdo->prepare("SELECT * FROM profil");
         $result = $sth->fetchAll();
         return $result;
     }

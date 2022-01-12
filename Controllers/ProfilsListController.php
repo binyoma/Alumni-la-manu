@@ -1,10 +1,8 @@
 <?php
-require_once("../utils/database.php");
-$pdo= new Database();
-// $alumni=$pdo->getAllAlumni($pdo);
-$sth = $pdo->prepare("SELECT * FROM  profil ");
-        $sth->execute();
-        $alumni = $sth->fetchAll(PDO::FETCH_OBJ);
+require_once("../models/Admin.php");
+$pdo= new Admin();
+$alumni=$pdo->getAllAlumni($pdo);
+
 echo "<pre>";
 print_r($alumni);
 echo "</pre>";

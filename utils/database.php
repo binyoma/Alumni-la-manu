@@ -16,7 +16,8 @@ class Database {
         }
     }
 
-    public function getAllAlumni($pdo){
+    public function getAllAlumni(){
+
         $sth = $pdo->prepare("SELECT * FROM  profil ");
         $sth->execute();
         $result = $sth->fetchAll(PDO::FETCH_OBJ);
