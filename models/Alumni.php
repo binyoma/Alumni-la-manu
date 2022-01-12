@@ -1,11 +1,11 @@
 <?php
 require_once("../utils/database.php");
 class Alumni {
-    private $_nom;
-    private $_prenom;
-    private $_pseudo;
-    private $_mail;
-    private $_mdp;
+    private $_lastname;
+    private $_firstname;
+    private $_alias;
+    private $_email;
+    private $_password;
     private $_campus;
     private $_promo;
     private $_periode;
