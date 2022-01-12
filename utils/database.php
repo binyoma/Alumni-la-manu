@@ -1,7 +1,5 @@
 <?php
-class Database {
-
-    public function __construct(){
+    function connexion(){
         try{
             $dsn = 'mysql:host=localhost;dbname=alumini;charset=utf8';
            $login = 'root';
@@ -15,16 +13,6 @@ class Database {
             echo 'erreur de connexion à la BDD : '. $e->getMessage();
         }
     }
-
-    public function getAllAlumni(){
-
-        $sth = $pdo->prepare("SELECT * FROM  profil ");
-        $sth->execute();
-        $result = $sth->fetchAll(PDO::FETCH_OBJ);
-        return $result;
-    }
-    
-}
     
    
 

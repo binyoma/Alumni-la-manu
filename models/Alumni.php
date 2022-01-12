@@ -130,7 +130,7 @@ class Alumni {
 
     
 
-    public function add(){
+    public function new(){
         try{
             // rêquete préparée
             $pdo=connexion();
