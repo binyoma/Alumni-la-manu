@@ -1,6 +1,7 @@
 <?php
 require_once("../utils/database.php");
 class Alumni {
+    private $_id_Profil;
     private $_lastname;
     private $_firstname;
     private $_alias;
@@ -8,62 +9,66 @@ class Alumni {
     private $_password;
     private $_campus;
     private $_promo;
-    private $_periode;
+    private $_date_start;
+    private $_date_end;
     private $_github;
     private $_photo;
-    private $_anecdote;
-    private $_db;
-
-    public function __construct(){
-       $this->_nom="";
-       $this->_prenom=""; 
-       $this->_pseudo="";
-       $this->_mail="";
-       $this->_mdp="";
-       $this->_campus="";
-       $this->_promo="";
-       $this->_periode="";
-       $this->_github=""; 
-       $this->_photo="";
-       $this->_anecdote="";
-       $this->_db=connextion();
-    }
-
-    public function getNom(){
-        return $this->$_nom;
-    }
-
-    public function setNom($nom){
-        $this->$_nom=$nom;
-    }
-    public function getPrenom(){
-        return $this->$_prenom;
-    }
+    private $_comment;
     
-    public function setPrenom($prenom){
-        $this->$_prenom=$prenom;
+
+    public function __construct($lastname,$firstname,$alias,
+    $email,$password,$campus,$promo,$date_start,$date_end,$github,$photo,$comment,$id_profil){
+      
+       $this->_lastname=$lastname;
+       $this->_firstname=$firstname; 
+       $this->_alias=$alias;
+       $this->_email=$email;
+       $this->_password=$password;
+       $this->_campus=$campus;
+       $this->_promo=$promo;
+       $this->_date_start=$date_start;
+       $this->_date_end=$date_end;
+       $this->_github=$github; 
+       $this->_photo=$photo;
+       $this->_comment=$comment;
+       $this->_id_Profil=$id_profil;
     }
 
-    public function getPseudo(){
-        return $this->$_pseudo;
+    public function getLastname(){
+        return $this->$_lastname;
+    }
+
+    public function setLastname($lastname){
+        $this->$_lastname=$lastname;
+    }
+    public function getFirstname(){
+        return $this->$_firstname;
     }
     
-    public function setPseudo($pseudo){
-        $this->$_pseudo=$pseudo;
+    public function setFirstname($firstname){
+        $this->$_firstname=$firstname;
     }
-    public function getMail(){
-        return $this->$_mail;
-    }
-    
-    public function setMail($mail){
-        $this->$_mail=$mail;
-    }
-    public function getMdp(){
-        return $this->$_mdp;
+
+    public function getAlias(){
+        return $this->$_alias;
     }
     
-    public function setMdp($mdp){
-        $this->$_mdp=$mdp;
+    public function setAlias($alias){
+        $this->$_alias=$alias;
+    }
+    public function getEmail(){
+        return $this->$_email;
+    }
+    
+    public function setEmail($email){
+        $this->$_email=$email;
+    }
+    public function getPassword(){
+        return $this->$_password;
+    }
+    
+    public function setPassword($password){
+        $this->$_password=$password;
     }
     public function getCampus(){
         return $this->$_campus;
@@ -79,12 +84,20 @@ class Alumni {
     public function setPromo($promo){
         $this->$_promo=$promo;
     }
-    public function getPeriode(){
-        return $this->$_periode;
+    public function getDate_start(){
+        return $this->$_date_start;
     }
     
-    public function setPeriode($periode){
-        $this->$_periode=$periode;
+    public function setDate_start($date_start){
+        $this->$_date_start=$date_start;
+    }
+
+    public function getDate_end(){
+        return $this->$_date_end;
+    }
+    
+    public function setDate_end($date_end){
+        $this->$_date_end=$date_end;
     }
     public function getGithub(){
         return $this->$_github;
@@ -100,21 +113,22 @@ class Alumni {
     public function setPhoto($photo){
         $this->$_photo=$photo;
     }
-    public function getAnecdote(){
-        return $this->$_anecdote;
+    public function getComment(){
+        return $this->$_comment;
     }
     
-    public function setAnecdote($anecdote){
-        $this->$_anecdote=$anecdote;
+    public function setComment($comment){
+        $this->$_comment=$comment;
+    }
+    public function getId_profil(){
+        return $this->$_id_profil;
+    }
+    
+    public function setId_profil($id_profil){
+        $this->$_id_profil=$id_profil;
     }
 
-    public function getAllAlumni(){
-        $pdo=connexion();
-        // to do :add table in sql
-        $sth = $pdo->prepare("SELECT * FROM ");
-        $result = $sth->fetchAll();
-        return $result;
-    }
+    
 
     public function add(){
         try{
