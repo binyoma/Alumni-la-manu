@@ -3,12 +3,13 @@
 <body>
     <div class="container">
         <div class="card-title p-5">
-            <h2>Inscrivez-vous</h2>
+            <h2>Modifiez votre profil</h2>
         </div>
         <div class="card-text p-5">
             <div class="row">
                 <div class="col">
                     <form action="InscriptionController.php" method="POST">
+                        <input type="hidden" name="id" value=""></input>
                         <!-- Champ nom-->
                         <div class="mb-3">
                             <label for="nom" class="form-label">Nom</label>
