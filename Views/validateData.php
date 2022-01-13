@@ -29,7 +29,7 @@
          no
         </label>
     </div>
-    <button type="submit"></button>
+    <button type="submit">Validate</button>
     </form>
     </div>
 

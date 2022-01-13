@@ -36,6 +36,13 @@ class Admin {
         $result = $sth->fetchAll();
         return $result;
     }
+    public function getOneDataToValidate($id){
+        $pdo=$this->_db;
+        $sth = $pdo->prepare("SELECT * FROM attente where id =$id");
+        $sth->execute();
+        $result = $sth->fetchAll();
+        return $result;
+    }
 
 }
 ?>
