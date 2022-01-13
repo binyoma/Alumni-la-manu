@@ -6,5 +6,5 @@ $alumni=$pdo->getAllAlumni();
 echo "<pre>";
 print_r($alumni);
 echo "</pre>";
-require_once("../views/Profils-List.php");
+require_once("../Views/profils-List.php");
 ?>
