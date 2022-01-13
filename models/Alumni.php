@@ -25,7 +25,6 @@ class Alumni {
        $this->_alias=$alias;
        $this->_email=$email;
        $this->_password=$password;
-       echo 'password : ' .$password. '<br>';
        $this->_campus=$campus;
        $this->_promo=$promo;
        $this->_date_start=$date_start;

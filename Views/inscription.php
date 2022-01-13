@@ -2,15 +2,7 @@
 <?php
 print_r($_POST);
 print_r($_FILES);
-if(isset($_FILES['photo'])){
-    $tmpName = $_FILES['photo']['tmp_name'];
-    $name = $_FILES['photo']['name'];
-    $size = $_FILES['photo']['size'];
-    $error = $_FILES['photo']['error'];
-    echo '<br>tmpName'.$tmpName;
-    echo '<br>Name'.$name;
-    move_uploaded_file($tmpName, '../public/img/'.$name);
-}
+
 
 
 ?>
