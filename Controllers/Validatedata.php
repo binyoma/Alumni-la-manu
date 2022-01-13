@@ -6,5 +6,5 @@ $alumni=$pdo->getAllDataToValidate();
 echo "<pre>";
 print_r($alumni);
 echo "</pre>";
-require_once("../views/Profils-List.php");
+require_once("../views/validateData.php");
 ?>
