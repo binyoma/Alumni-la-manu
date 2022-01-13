@@ -21,13 +21,15 @@
             <?php 
          foreach($alumni as $alum){?>
             <div class="card col-sm-3 m-2" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+            <img src="../assets/images/<?=$alum->photo?>" class="card-img-top" alt="...">
+                
                 <div class="card-body">
                     <h5 class="card-title"><?=$alum->lastname. " ".$alum->firstname?></h5>
-                    <p class="card-text"> <?=$alum->campus?></p>
-                    <p class="card-text">Période d'études</p>
-                    <p class="card-text">Promo</p>
-                    <a href="../Views/Profils-List.php" class="btn btn-primary">Détails</a>
+                    <p class="card-text"><?=$alum->campus?></p>
+                    <p class="card-text"><?=$alum->promo?></p>
+                    <p>Période d'études:</p>
+                    <p class="card-text"><?=$alum->date_start." – ".$alum->date_end?></p>                  
+                    <a href="../Controllers/ProfilDetailsController.php?id=<?=$alum->id?>" class="btn btn-primary">Détails</a>
                 </div>
             </div>
             <?php }
