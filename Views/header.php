@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
+<body>
 <div class="text-white">
   <img src="../assets/images/studying_crop.jpeg" class="card-img" alt="...">
   <div class="card-img-overlay">
@@ -39,7 +40,7 @@
                 <!-- Lien 2 -->
                 <li class="nav-item">
                     <a class="nav-link active text-light fw-light py-0" aria-current="page"
-                        href="/Alumini-la-manu/Views/Inscription.php">Inscrivez-vous</a>
+                        href="/Alumini-la-manu/Views/inscription.php">Inscrivez-vous</a>
                 </li>
             </ul>
         </div>

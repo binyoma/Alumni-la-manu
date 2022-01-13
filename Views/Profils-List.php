@@ -2,7 +2,7 @@
 ?>
 
 
-<body>
+
     <div class="container">
         <!-- Recherche -->
         <nav class="navbar navbar-expand-sm">
@@ -35,6 +35,6 @@
         </div>
          </div>
 
-</body>
+>
 
 <?php include_once('footer.php');?>
