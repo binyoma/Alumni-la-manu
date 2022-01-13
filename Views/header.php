@@ -53,12 +53,16 @@ for ($i = 0; $i <= count($parts) - 1; $i++) {
                 <!-- Lien 1 -->
                 <li class="nav-item">
                     <a class="nav-link active text-light fw-light py-0" aria-current="page"
+
                         href="http://<?=$dir_root?>alumni-la-manu/Controllers/ProfilsListController.php">Profils des alumni</a>
+
                 </li>
                 <!-- Lien 2 -->
                 <li class="nav-item">
                     <a class="nav-link active text-light fw-light py-0" aria-current="page"
+
                         href="http://<?=$dir_root?>alumni-la-manu/Views/inscription.php">Inscrivez-vous</a>
+
                 </li>
             </ul>
         </div>
