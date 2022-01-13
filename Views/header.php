@@ -24,7 +24,11 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid px-5">
         <!-- Accueil (icône)-->
-        <a class="navbar-brand" href="../alumni-la-manu/index.php"><i
+
+        <a class="navbar-brand" href="../alumni-la-manu/index.php"></a>
+
+ 
+
                 class="bi bi-house-door-fill py-0 text-light"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,12 +39,18 @@
                 <!-- Lien 1 -->
                 <li class="nav-item">
                     <a class="nav-link active text-light fw-light py-0" aria-current="page"
-                        href="../alumni-la-manu/Controllers/ProfilsListController.php">Profils des alumni</a>
+
+
+                        href="/Alumini-la-manu/Controllers/ProfilsListController.php">Profils des alumni</a>
+
                 </li>
                 <!-- Lien 2 -->
                 <li class="nav-item">
                     <a class="nav-link active text-light fw-light py-0" aria-current="page"
-                        href="../alumni-la-manu/Views/inscription.php">Inscrivez-vous</a>
+
+
+                        href="../Views/inscription.php">Inscrivez-vous</a>
+
                 </li>
             </ul>
         </div>
