@@ -4,30 +4,30 @@
         <div class="row">
             <div class="col">
                 <div class="card-title p-5">
-                    <h2>Profil de (prénom) (nom)</h2>
+                    <h2>Profil de <?=$alum->lastname. " ".$alum->firstname?></h2>
                 </div>
             </div>
             <div class="col">
-                <div class="card-title p-5">
-                    <h2>Rendez-vous du patient</h2>
+                <div class="card p-5">
+                <img src="../assets/images/julie.jpeg" alt="...">
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <div class="card-text p-5">
-                    <p>pseudo: ?????</p>
-                    <p>le mail</p>
-                    <p>le mail</p>
-                    <p>Campus ?????</p>
-                    <p>promo</p>
-                    <p>A étudié du ??? au ???</p>
+                    <p>pseudo: <?=$alum->alias?></p>
+                    <p><?=$alum->mail?></p>
+                    <p><?=$alum->github?></p>
+                    <p>Campus <?=$alum->campus?></p>
+                    <p>promo <?=$alum->promo?></p>
+                    <p>A étudié du <?=$alum->date_start?> au <?=$alum->end?></p>
                     
 
                 </div>
                 <div class="card-text px-5 py-3">
                     <a class="text-danger text-decoration-none"
-                    href="../Controllers/PatientModifController.php?id=<?=$patients1->id?>">Modifier le profil <i
+                    href="../Controllers/ProfilModifController.php?id=<?=$patients1->id?>">Modifier le profil <i
                     class="bi bi-arrow-right-circle"></i></a>
                 </div>
             </div>
