@@ -8,37 +8,32 @@ USE Alumini;
 # Table: admin
 #------------------------------------------------------------
 
+
 CREATE TABLE admin(
-        id         Int  Auto_increment  NOT NULL ,
-        lastname   Varchar (50) NOT NULL ,
-        firstname  Varchar (50) NOT NULL ,
-        alias      Varchar (50) NOT NULL ,
-        email      Varchar (200) NOT NULL ,
-        password   Varchar (50) NOT NULL ,
-        promo      Varchar (50) NOT NULL ,
-        date_start Date NOT NULL ,
-        date_end   Date NOT NULL ,
-        github     Varchar (50) NOT NULL ,
-        photo      Varchar (200) NOT NULL
+        id        Int  Auto_increment  NOT NULL ,
+        lastname  Varchar (50) NOT NULL ,
+        firstname Varchar (50) NOT NULL ,
+        email     Varchar (200) NOT NULL ,
+        password  Varchar (50) NOT NULL
 	,CONSTRAINT admin_PK PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
-INSERT INTO admin(lastname,firstname,alias,email, password,promo,date_start,date_end,github,photo)
-        VALUES('Hughes', 'Antoine', 'Gros bill','hughes.antoine@hotmail.com', 'lamanu', 'promo', '2021-11-26', '2022-02-07','git_grosbill', '<a href="./assets/img/photo_grosbill.jpg"></a>');
+INSERT INTO admin(lastname,firstname,email, password)
+        VALUES('Hughes', 'Antoine', 'hughes.antoine@hotmail.com', 'antoine' );
 
 
 
 #------------------------------------------------------------
-# Table: profil
+# Table: profils
 #------------------------------------------------------------
 
-CREATE TABLE profil(
+CREATE TABLE profils(
         id         Int  Auto_increment  NOT NULL ,
         lastname   Varchar (50) NOT NULL ,
         firstname  Varchar (50) NOT NULL ,
         alias      Varchar (50) NOT NULL ,
         email      Varchar (200) NOT NULL ,
-        password   Varchar (50) NOT NULL ,
+        password   Varchar (60) NOT NULL ,
         campus     Varchar (50) NOT NULL ,
         promo      Varchar (50) NOT NULL ,
         date_start Date NOT NULL ,
@@ -50,7 +45,7 @@ CREATE TABLE profil(
 )ENGINE=InnoDB;
 
 
-INSERT INTO profil(lastname,firstname,alias, email, password, campus, promo,date_start,date_end,github,photo,comment)
+INSERT INTO profils(lastname,firstname,alias, email, password, campus, promo,date_start,date_end,github,photo,comment)
         VALUES('Delime-Codrin', 'Kévin', 'Kekette', 'delime-codrinkevin@hotmail.fr',  'kevin','campus', 'promo', '2021-11-26', '2022-02-07','delim001', '<a href="./assets/img/photo_delime-codrin_kevin.jpg"></a>', 'Mais quelle con ce gars!!!'),
         ('Villate', 'Laurent', 'Le_prof', 'villate.laurent@hotmail.fr', 'laurent', 'campus', 'promo', '2021-11-26', '2022-02-07','vill001', '<a href="./assets/img/photo_villate_laurent.jpg"></a>', 'Le professionnel'),
         ('Binyoma', 'Innocent', 'G_pas_idée', 'binyoma.innocent@hotmail.fr', 'innocent', 'campus', 'promo', '2021-11-26', '2022-02-07','bin001', '<a href="./assets/img/photo_binyoma_innocent.jpg"></a>', 'Il a attrapé le COVID');
@@ -65,7 +60,7 @@ CREATE TABLE attente(
         firstname  Varchar (50) ,
         alias      Varchar (50) ,
         email      Varchar (200) ,
-        password   Varchar (50) ,
+        password   Varchar (60) ,
         campus     Varchar (50) ,
         promo      Varchar (50) ,
         date_start Date ,
@@ -73,10 +68,8 @@ CREATE TABLE attente(
         github     Varchar (50) ,
         photo      Varchar (200) ,
         comment    Text ,
-        id_profil  Int NOT NULL
+        id_profil  Int 
 	,CONSTRAINT attente_PK PRIMARY KEY (id)
-
-	,CONSTRAINT attente_profil_FK FOREIGN KEY (id_profil) REFERENCES profil(id)
 )ENGINE=InnoDB;
 
 

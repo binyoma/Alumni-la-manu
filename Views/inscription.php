@@ -3,7 +3,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="card-title mx-5 p-5 text-center">
+            <div class="card-title py-5">
                 <h2>Inscrivez-vous</h2>
             </div>
         </div>
