@@ -1,63 +1,43 @@
-<?php include_once('header.php');
-
-
-//$submit =$_POST('submit');
-//var_dump($submit);
-if(isset($_POST)){
-    var_dump($_POST);
-
-
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
-
-}
-
-?>
+<?php include_once('header.php');?>
 
 <body>
     <div class="container">
         <div class="card-title p-5">
-            <h2>Inscrivez-vous</h2>
+            <h2>Modifiez votre profil</h2>
         </div>
         <div class="card-text p-5">
             <div class="row">
                 <div class="col">
-                    <form action="../Controllers/InscriptionController.php" method="POST">
+                    <form action="InscriptionController.php" method="POST">
+                        <input type="hidden" name="id" value=""></input>
                         <!-- Champ nom-->
                         <div class="mb-3">
                             <label for="nom" class="form-label">Nom</label>
-                            <input type="text" class="form-control form-control-sm" name="lastname" id="lastname" placeholder="">
+                            <input type="text" class="form-control form-control-sm" name="nom" id="nom" placeholder="">
                         </div>
                         <!-- Champ prénom-->
                         <div class="mb-3">
                             <label for="prenom" class="form-label">Prénom</label>
-                            <input type="text" class="form-control form-control-sm" name="firstname" id="firstname"
+                            <input type="text" class="form-control form-control-sm" name="prenom" id="prenom"
                                 placeholder="">
                         </div>
                         <!-- Champ pseudo-->
                         <div class="mb-3">
-                            <label for="alias" class="form-label">Pseudo</label>
-                            <input type="text" class="form-control form-control-sm" name="alias" id="alias"
-                                placeholder="">
-                        </div>
-                         <!-- Champ pass-->
-                         <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="text" class="form-control form-control-sm" name="password" id="password"
+                            <label for="prenom" class="form-label">Pseudo</label>
+                            <input type="text" class="form-control form-control-sm" name="prenom" id="prenom"
                                 placeholder="">
                         </div>
                         <!-- Champ mail-->
                         <div class="mb-3">
                             <label for="mail" class="form-label">Courriel</label>
-                            <input type="email" class="form-control form-control-sm" name="email" id="email"
+                            <input type="email" class="form-control form-control-sm" name="mail" id="mail"
                                 placeholder="nom@mail.fr">
                         </div>
                         <!-- Champ campus-->
                         <div class="mb-3">
                             <label for="campus" class="control-label">Campus</label>
                             <input class="form-control" list="listCampus" id="campus"
-                               name="campus" placeholder="Sélectionnez un campus">
+                                placeholder="Sélectionnez un campus">
                             <datalist id="listCampus">
                                 <option value="Amiens">
                                 <option value="Le Havre">
@@ -69,7 +49,7 @@ echo '</pre>';
                         <!-- Champ Promo-->
                         <div class="mb-3">
                             <label for="Promo" class="control-label">Promo</label>
-                            <input class="form-control" list="listPromo" id="promo" name="promo"
+                            <input class="form-control" list="listPromo" id="promo"
                                 placeholder="Sélectionnez une formation">
                             <datalist id="listPromo">
                                 <option value="DWWM">
@@ -92,14 +72,13 @@ echo '</pre>';
                         <div class="mb-3">
                             <label for="github" class="form-label">Lien GitHub</label>
                             <input type="text" class="form-control form-control-sm" name="github" id="github"
-                                placeholder="https://github.com/"/>
+                                placeholder="https://github.com/">
                         </div>
                         <!-- Champ photo-->
                         
                             <div class="mb-3">
                                 <label for="photo" class="form-label">photo</label>
-                                <input type="text" class="form-control form-control-sm" name="photo" id="photo" />
-                                <!--<input class="form-control form-control-sm" name="photo" id="photo" type="file">-->
+                                <input class="form-control form-control-sm" name="photo" id="photo" type="file">
                             </div>
                         
                         <!-- Champ anecdote-->
@@ -110,7 +89,7 @@ echo '</pre>';
                         </div>
                         <!-- Bouton Submit-->
                         <div class="mb-3 text-center">
-                            <button type="submit" name="submit" class="btn btn-outline-danger">Envoyer</button>
+                            <button type="submit" class="btn btn-outline-danger">Envoyer</button>
                         </div>
                     </form>
                 </div>
