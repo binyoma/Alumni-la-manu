@@ -40,10 +40,12 @@
                 <!-- Lien 2 -->
                 <li class="nav-item">
                     <a class="nav-link active text-light fw-light py-0" aria-current="page"
+
                         href="../alumni-la-manu/Views/inscription.php">Inscrivez-vous</a>
+
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<!-- fin header. Début body.-->
+<!-- fin header-->
