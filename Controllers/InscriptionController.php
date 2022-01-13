@@ -5,6 +5,9 @@ require_once("../models/Alumni.php");
 echo '<pre>';
 print_r($_POST);
 echo '</pre>';
+echo '<pre>';
+print_r($_FILES);
+echo '</pre>';
 
 $profil = new Alumni ( $_POST['lastname'],
                              $_POST['firstname'],
@@ -16,7 +19,7 @@ $profil = new Alumni ( $_POST['lastname'],
                              $_POST['date_start'], 
                              $_POST['date_end'], 
                              $_POST['github'],
-                             $_POST['photo'], 
+                             $_FILES['photo']['name'], 
                              $_POST['comment'], 
                              0
                             );

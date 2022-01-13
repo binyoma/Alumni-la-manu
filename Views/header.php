@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
 <body>
-<div class="text-white">
+<!-- <div class="text-white">
   <img src="../assets/images/studying_crop.jpeg" class="card-img" alt="...">
   <div class="card-img-overlay">
     <h1 class="card-title p-5 text-center">ALUMNI <small
                 class="fw-lighter"> La Manu</small></h1>   
   </div>
-</div>
+</div> -->
 <!-- Barre de menu-->
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid px-5">
@@ -40,7 +40,7 @@
                 <!-- Lien 2 -->
                 <li class="nav-item">
                     <a class="nav-link active text-light fw-light py-0" aria-current="page"
-                        href="/Alumini-la-manu/Views/inscription.php">Inscrivez-vous</a>
+                        href="../Views/inscription.php">Inscrivez-vous</a>
                 </li>
             </ul>
         </div>

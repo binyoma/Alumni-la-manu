@@ -1,4 +1,4 @@
-<?php include_once('header.php');?>
+<?php include_once('header.php');?> 
 <?php
 print_r($_POST);
 print_r($_FILES);
@@ -9,14 +9,14 @@ if(isset($_FILES['photo'])){
     $error = $_FILES['photo']['error'];
     echo '<br>tmpName'.$tmpName;
     echo '<br>Name'.$name;
-    move_uploaded_file($tmpName, '../upload/'.$name);
+    move_uploaded_file($tmpName, '../public/img/'.$name);
 }
 
 
 ?>
 
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="card-title py-5">
                 <h2>Inscrivez-vous</h2>
@@ -26,8 +26,9 @@ if(isset($_FILES['photo'])){
             <!--<form class="row g-5" action="InscriptionController.php" method="POST" enctype="multipart/form-data">-->
             <form class="row g-5" action="../Controllers/InscriptionController.php" method="POST" enctype="multipart/form-data">
                 <!-- Champ Nom-->
-                <div class="col-md-6 mb-3">
-                    <label for="lastname" class="form-label">Nom</label>
+                 
+                 <div class="col-md-6 mb-3">
+                    <label for="alias" class="form-label">Nom</label>
                     <input type="text" class="form-control form-control-sm" name="lastname" id="lastname" placeholder="">
                 </div>
                 <!-- Champ prénom-->

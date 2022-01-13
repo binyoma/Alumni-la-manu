@@ -27,7 +27,7 @@
                     <p class="card-text"> <?=$alum->campus?></p>
                     <p class="card-text">Période d'études</p>
                     <p class="card-text">Promo</p>
-                    <a href="#" class="btn btn-primary">Détails</a>
+                    <a href="../Views/Profils-List.php" class="btn btn-primary">Détails</a>
                 </div>
             </div>
             <?php }
