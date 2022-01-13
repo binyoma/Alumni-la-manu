@@ -1,7 +1,8 @@
 <?php
 require_once("../models/Admin.php");
 $pdo= new Admin();
-$alumni=$pdo->getAllAlumni();
+$id=$_GET['id'];
+$alumnus=$pdo->getAlumnus($id);
 
 echo "<pre>";
 print_r($alumni);
