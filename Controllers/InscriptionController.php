@@ -2,12 +2,22 @@
 require_once("../models/Alumni.php");
 
 
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
-echo '<pre>';
-print_r($_FILES);
-echo '</pre>';
+//echo '<pre>';
+//print_r($_POST);
+//echo '</pre>';
+//echo '<pre>';
+//print_r($_FILES);
+//echo '</pre>';
+
+if(isset($_FILES['photo'])){
+    $tmpName = $_FILES['photo']['tmp_name'];
+    $name = $_FILES['photo']['name'];
+    $size = $_FILES['photo']['size'];
+    $error = $_FILES['photo']['error'];
+    //echo '<br>tmpName'.$tmpName;
+   // echo '<br>Name'.$name;
+    move_uploaded_file($tmpName, '../assets/images/'.$name);
+}
 
 $profil = new Alumni ( $_POST['lastname'],
                              $_POST['firstname'],
@@ -23,7 +33,7 @@ $profil = new Alumni ( $_POST['lastname'],
                              $_POST['comment'], 
                              0
                             );
-var_dump($profil);
+//var_dump($profil);
  $new_profil = $profil->new_alumni();
 
  
