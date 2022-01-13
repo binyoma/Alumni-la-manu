@@ -64,5 +64,4 @@ for ($i = 0; $i <= count($parts) - 1; $i++) {
         </div>
     </div>
 </nav>
-<?=$root?>
-<!-- fin header. Début body.-->
+<!-- fin header-->
