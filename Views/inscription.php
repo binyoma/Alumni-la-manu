@@ -22,6 +22,13 @@ print_r($_FILES);
                  <div class="col-md-6 mb-3">
                     <label for="alias" class="form-label">Nom</label>
                     <input type="text" class="form-control form-control-sm" name="lastname" id="lastname" placeholder="">
+                </div><div class="col-md-6 mb-3">
+                    <label for="lastname" class="form-label">Nom</label>
+                    <input type="text" class="form-control form-control-sm" name="lastname" id="lastname" placeholder="">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lastname" class="form-label">Nom</label>
+                    <input type="text" class="form-control form-control-sm" name="lastname" id="lastname" placeholder="">
                 </div>
                 <!-- Champ prénom-->
                 <div class="col-md-6 mb-3">
