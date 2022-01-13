@@ -15,9 +15,16 @@ class Admin {
     }
 
     public function getAllAlumni(){
-        $pdo=connexion();
-        // to do :add table in sql
-        $sth = $pdo->prepare("SELECT * FROM ");
+        $pdo=$this->_db;
+        $sth = $pdo->query("SELECT * FROM profils");
+        $result = $sth->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+    }
+
+    public function getAllDataToValidate(){
+        $pdo=$this->_db;
+        $sth = $pdo->prepare("SELECT * FROM attente");
+        $sth->execute();
         $result = $sth->fetchAll();
         return $result;
     }

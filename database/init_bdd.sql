@@ -76,4 +76,8 @@ CREATE TABLE attente(
 INSERT INTO attente(alias, id_profil)
         VALUES('delim001','1');
 
+INSERT INTO attente(lastname,firstname,alias, email, password, campus, promo,date_start,date_end,github,photo,comment, id_profil)
+        VALUES('Quintin', 'Kévin', 'quitin', 'quintinkevin@hotmail.fr',  'kevin','Amiens', 'promo', '2021-11-26', '2022-02-07','quintin', '<a href="./assets/img/photo_delime-codrin_kevin.jpg"></a>', 'à demander', null),
+        ('Kessous', 'Jeremy', 'kjeremy', 'kessous.jeremy@hotmail.fr', 'laurent', 'Amiens', 'promo', '2021-11-26', '2022-02-07','kessous', '<a href="./assets/img/photo_villate_laurent.jpg"></a>', 'quitin', null);
+
 
