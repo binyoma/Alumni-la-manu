@@ -16,7 +16,14 @@ class Admin {
 
     public function getAllAlumni(){
         $pdo=$this->_db;
-        $sth = $pdo->prepare("SELECT * FROM profils");
+        $sth = $pdo->query("SELECT * FROM profils");
+        $result = $sth->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+    }
+
+    public function getAllDataToValidate(){
+        $pdo=$this->_db;
+        $sth = $pdo->prepare("SELECT * FROM attente");
         $sth->execute();
         $result = $sth->fetchAll();
         return $result;
