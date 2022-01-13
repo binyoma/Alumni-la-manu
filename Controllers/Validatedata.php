@@ -1,10 +1,10 @@
 <?php
 require_once("../models/Admin.php");
 $pdo= new Admin();
-$alumni=$pdo->getAllAlumni();
+$alumni=$pdo->getAllDataToValidate();
 
 echo "<pre>";
 print_r($alumni);
 echo "</pre>";
-require_once("../Views/profils-List.php");
+require_once("../views/validateData.php");
 ?>

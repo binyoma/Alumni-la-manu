@@ -1,6 +1,6 @@
 <?php include_once('header.php');?>
 
-<body>
+
     <div class="container">
         <div class="card-title p-5">
             <h2>Modifiez votre profil</h2>
@@ -98,5 +98,5 @@
             </div>
         </div>
     </div>
-</body>
+
 <?php include_once('footer.php');?>
