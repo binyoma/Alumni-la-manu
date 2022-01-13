@@ -1,4 +1,6 @@
-<?php include_once('header.php');?>
+<?php include_once('header.php');
+include_once('../Controllers/ProfilDetailsController.php');
+?>
 
     <div class="container">
         <div class="row">

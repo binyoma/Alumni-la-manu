@@ -4,13 +4,16 @@
 
 //code pour définir le chemin racine du localhost
 $url = $_SERVER['REQUEST_URI']; //returns the current URL
+//echo $url. '<br>';
 $parts = explode('/',$url);
-$dir_root = $_SERVER['SERVER_NAME'];
+//echo 'part : ' .print_r($parts). '<br> counts parts : '.count($parts).'<br>';
+$dir_root = $_SERVER['SERVER_NAME']. ':8888';
+//echo 'serveur name :' .$dir_root. '<br>';
 for ($i = 0; $i <= count($parts) - 1; $i++) {
-    if($parts[$i] != "alumni-la-manu"){
+    if($parts[$i] != "Alumni-la-manu"){
     $dir_root .= $parts[$i] . "/";
     }else{
-        $i = count($parts) - 1;
+        $i = count($parts) ;
     }
 }
 //echo 'root directory : ' .$dir_root. '<br>';
@@ -42,7 +45,7 @@ for ($i = 0; $i <= count($parts) - 1; $i++) {
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid px-5">
         <!-- Accueil (icône)-->
-        <a class="navbar-brand" href="http://<?=$dir_root?>alumni-la-manu/index.php"><i
+        <a class="navbar-brand" href="http://<?=$dir_root?>Alumni-la-manu/index.php"><i
                 class="bi bi-house-door-fill py-0 text-light"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,14 +57,21 @@ for ($i = 0; $i <= count($parts) - 1; $i++) {
                 <li class="nav-item">
                     <a class="nav-link active text-light fw-light py-0" aria-current="page"
 
-                        href="http://<?=$dir_root?>alumni-la-manu/Controllers/ProfilsListController.php">Profils des alumni</a>
+                        href="http://<?=$dir_root?>Alumni-la-manu/Controllers/ProfilsListController.php">Profils des alumni</a>
 
                 </li>
                 <!-- Lien 2 -->
                 <li class="nav-item">
                     <a class="nav-link active text-light fw-light py-0" aria-current="page"
 
-                        href="http://<?=$dir_root?>alumni-la-manu/Views/inscription.php">Inscrivez-vous</a>
+                        href="http://<?=$dir_root?>Alumni-la-manu/Views/inscription.php">Inscrivez-vous</a>
+
+                </li>
+                <!-- connexion -->
+                <li class="nav-item">
+                    <a class="nav-link active text-light fw-light py-0" aria-current="page"
+
+                        href="http://<?=$dir_root?>Alumni-la-manu/Views/login.php">connexion</a>
 
                 </li>
             </ul>
