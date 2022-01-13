@@ -1,7 +1,7 @@
 <?php
     function connexion(){
         try{
-            $dsn = 'mysql:host=localhost;dbname=alumini;charset=utf8';
+            $dsn = 'mysql:host=localhost;dbname=alumni;charset=utf8';
            $login = 'root';
            $password = '';
             // Nouvelle instance de PDO
