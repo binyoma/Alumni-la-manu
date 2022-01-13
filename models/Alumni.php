@@ -14,11 +14,12 @@ class Alumni {
     private $_github;
     private $_photo;
     private $_comment;
+    //private $_db;
     
 
     public function __construct($lastname,$firstname,$alias,
     $email,$password,$campus,$promo,$date_start,$date_end,$github,$photo,$comment,$id_profil){
-      
+      //echo "construct <br>";
        $this->_lastname=$lastname;
        $this->_firstname=$firstname; 
        $this->_alias=$alias;
@@ -32,6 +33,9 @@ class Alumni {
        $this->_photo=$photo;
        $this->_comment=$comment;
        $this->_id_Profil=$id_profil;
+       //$this->_db=connexion();
+
+
     }
 
     public function getLastname(){
@@ -130,17 +134,42 @@ class Alumni {
 
     
 
-    public function add(){
+    public function new_alumni(){
         try{
-            // rêquete préparée
             $pdo=connexion();
-            $stmt = $pdo->prepare("INSERT INTO  (nom, prenom, pseudo, mail, mdp, campus, promo, periode, github, photo, anecdote) VALUES (:nom, :prenom, :pseudo, :mail, :mdp, :campus, :promo, :periode, :github, :photo, :anecdote)");
-            $stmt->bindParam(':lastname',$this->lastname);
-            $stmt->bindParam(':firstname',$this->firstname);
-            $stmt->bindParam(':birthdate',$this->birthdate);
-            $stmt->bindParam(':phone',$this->phone);
-            $stmt->bindParam(':mail', $this->mail);
+
+            $sql = "INSERT INTO attente(lastname,firstname,alias, email, password, campus, promo,date_start,date_end,github,photo,comment,id_profil)
+                    VALUES(:lastname, 
+                        :firstname,
+                            :alias,
+                            :email,
+                            :password,
+                            :campus,
+                            :promo,
+                            :date_start,
+                            :date_end,
+                            :github,
+                            :photo, 
+                            :comment, 
+                            :id_profil)";
+    
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':lastname',$this->_lastname, PDO::PARAM_STR);
+            $stmt->bindParam(':firstname',$this->_firstname, PDO::PARAM_STR);
+            $stmt->bindParam(':alias',$this->_alias, PDO::PARAM_STR);
+            $stmt->bindParam(':email',$this->_email, PDO::PARAM_STR);
+            $stmt->bindParam(':password', $this->_password, PDO::PARAM_STR);
+            $stmt->bindParam(':campus', $this->_campus, PDO::PARAM_STR);
+            $stmt->bindParam(':promo', $this->_promo, PDO::PARAM_STR);
+            $stmt->bindParam(':date_start', $this->_date_start, PDO::PARAM_STR);
+            $stmt->bindParam(':date_end', $this->_date_end, PDO::PARAM_STR);
+            $stmt->bindParam(':github', $this->_github, PDO::PARAM_STR);
+            $stmt->bindParam(':photo', $this->_photo, PDO::PARAM_STR);
+            $stmt->bindParam(':comment', $this->_comment, PDO::PARAM_STR);
+            $stmt->bindParam(':id_profil', $this->_id_profil, PDO::PARAM_INT);
             $stmt->execute();
+
+            echo "données insérées <br>";
         }
         catch(PDOException $e){
             echo 'erreur d\'ajout : '. $e->getMessage();

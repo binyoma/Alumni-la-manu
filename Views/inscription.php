@@ -1,4 +1,19 @@
-<?php include_once('header.php');?>
+<?php include_once('header.php');
+
+
+//$submit =$_POST('submit');
+//var_dump($submit);
+if(isset($_POST)){
+    var_dump($_POST);
+
+
+echo '<pre>';
+print_r($_POST);
+echo '</pre>';
+
+}
+
+?>
 
 <body>
     <div class="container">
@@ -8,35 +23,41 @@
         <div class="card-text p-5">
             <div class="row">
                 <div class="col">
-                    <form action="InscriptionController.php" method="POST">
+                    <form action="../Controllers/InscriptionController.php" method="POST">
                         <!-- Champ nom-->
                         <div class="mb-3">
                             <label for="nom" class="form-label">Nom</label>
-                            <input type="text" class="form-control form-control-sm" name="nom" id="nom" placeholder="">
+                            <input type="text" class="form-control form-control-sm" name="lastname" id="lastname" placeholder="">
                         </div>
                         <!-- Champ prénom-->
                         <div class="mb-3">
                             <label for="prenom" class="form-label">Prénom</label>
-                            <input type="text" class="form-control form-control-sm" name="prenom" id="prenom"
+                            <input type="text" class="form-control form-control-sm" name="firstname" id="firstname"
                                 placeholder="">
                         </div>
                         <!-- Champ pseudo-->
                         <div class="mb-3">
-                            <label for="prenom" class="form-label">Pseudo</label>
-                            <input type="text" class="form-control form-control-sm" name="prenom" id="prenom"
+                            <label for="alias" class="form-label">Pseudo</label>
+                            <input type="text" class="form-control form-control-sm" name="alias" id="alias"
+                                placeholder="">
+                        </div>
+                         <!-- Champ pass-->
+                         <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="text" class="form-control form-control-sm" name="password" id="password"
                                 placeholder="">
                         </div>
                         <!-- Champ mail-->
                         <div class="mb-3">
                             <label for="mail" class="form-label">Courriel</label>
-                            <input type="email" class="form-control form-control-sm" name="mail" id="mail"
+                            <input type="email" class="form-control form-control-sm" name="email" id="email"
                                 placeholder="nom@mail.fr">
                         </div>
                         <!-- Champ campus-->
                         <div class="mb-3">
                             <label for="campus" class="control-label">Campus</label>
                             <input class="form-control" list="listCampus" id="campus"
-                                placeholder="Sélectionnez un campus">
+                               name="campus" placeholder="Sélectionnez un campus">
                             <datalist id="listCampus">
                                 <option value="Amiens">
                                 <option value="Le Havre">
@@ -48,7 +69,7 @@
                         <!-- Champ Promo-->
                         <div class="mb-3">
                             <label for="Promo" class="control-label">Promo</label>
-                            <input class="form-control" list="listPromo" id="promo"
+                            <input class="form-control" list="listPromo" id="promo" name="promo"
                                 placeholder="Sélectionnez une formation">
                             <datalist id="listPromo">
                                 <option value="DWWM">
@@ -71,13 +92,14 @@
                         <div class="mb-3">
                             <label for="github" class="form-label">Lien GitHub</label>
                             <input type="text" class="form-control form-control-sm" name="github" id="github"
-                                placeholder="https://github.com/">
+                                placeholder="https://github.com/"/>
                         </div>
                         <!-- Champ photo-->
                         
                             <div class="mb-3">
                                 <label for="photo" class="form-label">photo</label>
-                                <input class="form-control form-control-sm" name="photo" id="photo" type="file">
+                                <input type="text" class="form-control form-control-sm" name="photo" id="photo" />
+                                <!--<input class="form-control form-control-sm" name="photo" id="photo" type="file">-->
                             </div>
                         
                         <!-- Champ anecdote-->
@@ -88,7 +110,7 @@
                         </div>
                         <!-- Bouton Submit-->
                         <div class="mb-3 text-center">
-                            <button type="submit" class="btn btn-outline-danger">Envoyer</button>
+                            <button type="submit" name="submit" class="btn btn-outline-danger">Envoyer</button>
                         </div>
                     </form>
                 </div>

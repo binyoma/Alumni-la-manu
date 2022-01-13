@@ -11,7 +11,7 @@ class Admin {
       
        $this->_mail="";
        $this->_mdp="";
-       $this->_db=connextion();
+       $this->_db=connexion();
     }
 
     public function getAllAlumni(){
