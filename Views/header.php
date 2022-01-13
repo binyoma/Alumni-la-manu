@@ -1,3 +1,21 @@
+<?php 
+
+
+
+//code pour définir le chemin racine du localhost
+$url = $_SERVER['REQUEST_URI']; //returns the current URL
+$parts = explode('/',$url);
+$dir_root = $_SERVER['SERVER_NAME'];
+for ($i = 0; $i <= count($parts) - 1; $i++) {
+    if($parts[$i] != "alumni-la-manu"){
+    $dir_root .= $parts[$i] . "/";
+    }else{
+        $i = count($parts) - 1;
+    }
+}
+//echo 'root directory : ' .$dir_root. '<br>';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -24,7 +42,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid px-5">
         <!-- Accueil (icône)-->
-        <a class="navbar-brand" href="../alumni-la-manu/index.php"><i
+        <a class="navbar-brand" href="http://<?=$dir_root?>alumni-la-manu/index.php"><i
                 class="bi bi-house-door-fill py-0 text-light"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,15 +53,16 @@
                 <!-- Lien 1 -->
                 <li class="nav-item">
                     <a class="nav-link active text-light fw-light py-0" aria-current="page"
-                        href="../alumni-la-manu/Controllers/ProfilsListController.php">Profils des alumni</a>
+                        href="http://<?=$dir_root?>alumni-la-manu/Controllers/ProfilsListController.php">Profils des alumni</a>
                 </li>
                 <!-- Lien 2 -->
                 <li class="nav-item">
                     <a class="nav-link active text-light fw-light py-0" aria-current="page"
-                        href="../alumni-la-manu/Views/inscription.php">Inscrivez-vous</a>
+                        href="http://<?=$dir_root?>alumni-la-manu/Views/inscription.php">Inscrivez-vous</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<?=$root?>
 <!-- fin header. Début body.-->
