@@ -40,7 +40,7 @@ class Admin {
         $pdo=$this->_db;
         $sth = $pdo->prepare("SELECT * FROM attente where id =$id");
         $sth->execute();
-        $result = $sth->fetchAll();
+        $result = $sth->fetch(PDO::FETCH_OBJ);
         return $result;
     }
 
@@ -86,7 +86,44 @@ class Admin {
         }
     }
 
-
-
+    public function edit($id){
+        try{
+            $pdo=connexion();
+           $sql = "UPDATE profils 
+            SET lastname =:lastname,
+                firstname =:firstname,
+                alias = :alias, 
+                email = :email, 
+                password = :password,
+                campus = :campus,
+                promo = :promo,
+                date_start =:date_start,
+                date_end =:date_end,
+                github =:github,
+                photo =:photo,
+                comment =:comment
+                where id = :id";
+                $stmt = $pdo->prepare($sql);
+                $stmt->bindParam(':lastname',$this->_lastname, PDO::PARAM_STR);
+                $stmt->bindParam(':firstname',$this->_firstname, PDO::PARAM_STR);
+                $stmt->bindParam(':alias',$this->_alias, PDO::PARAM_STR);
+                $stmt->bindParam(':email',$this->_email, PDO::PARAM_STR);
+                $stmt->bindParam(':password', $this->_password, PDO::PARAM_STR);
+                $stmt->bindParam(':campus', $this->_campus, PDO::PARAM_STR);
+                $stmt->bindParam(':promo', $this->_promo, PDO::PARAM_STR);
+                $stmt->bindParam(':date_start', $this->_date_start, PDO::PARAM_STR);
+                $stmt->bindParam(':date_end', $this->_date_end, PDO::PARAM_STR);
+                $stmt->bindParam(':github', $this->_github, PDO::PARAM_STR);
+                $stmt->bindParam(':photo', $this->_photo, PDO::PARAM_STR);
+                $stmt->bindParam(':comment', $this->_comment, PDO::PARAM_STR);
+                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                $stmt->execute();
+    
+                echo "données insérées <br>";
+            }
+            catch(PDOException $e){
+                echo 'erreur d\'ajout : '. $e->getMessage();
+        }
+    }
 }
 ?>

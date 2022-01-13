@@ -5,7 +5,7 @@
            $login = 'root';
 
 
-           $password = 'root';
+           $password = '';
 
             // Nouvelle instance de PDO
             $pdo = new PDO($dsn, $login, $password);
