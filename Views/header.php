@@ -33,7 +33,11 @@ for ($i = 0; $i <= count($parts) - 1; $i++) {
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" href="http://<?=$dir_root?>Alumni-la-manu/assets/CSS/style.css">
+=======
+    <link rel="stylesheet" href="../assets/CSS/style.css">
+>>>>>>> 83e4931ff17b95912073925b2dcadca7ec5f1225
 </head>
 <body>
     <header>

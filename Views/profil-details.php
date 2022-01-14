@@ -27,13 +27,12 @@ include_once('../Controllers/ProfilDetailsController.php');
             <p>"<?=$alumnus->comment?>"</p>
         </div>
     </div>
-
-</div>
-<div class="row">
-    <div class="card-text text-center p-5">
-        <a class="text-secondary text-decoration-none"
-            href="../Views/profil-modif.php?id=<?=$id?>">Modifier le profil <i
-                class="bi bi-arrow-right-circle"></i></a>
+    <div class="row">
+        <div class="card-text text-center p-5">
+            <a class="text-secondary text-decoration-none"
+                href="../Views/profil-modif.php?id=<?=$id?>">Modifier le profil <i
+                    class="bi bi-arrow-right-circle"></i></a>
+        </div>
     </div>
 </div>
 </div>

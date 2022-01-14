@@ -7,6 +7,7 @@ $alumnus=$pdo->getOneDataToValidate($id);
 if(isset($_POST["validate"])){
     // check if admin choose to validate
     if($_POST["validate"]=="yes"){
+        
         $alum =new Alumni($alumnus->lastname,
             $alumnus->firstname,
             $alumnus->alias,
@@ -19,25 +20,22 @@ if(isset($_POST["validate"])){
             $alumnus->github,
             $alumnus->photo,
             $alumnus->comment,
-            0
+            $alumnus->id_profil
+            
         );
-
-        echo "<pre>";
-print_r($alum);
-echo "</pre>";
+        var_dump($alumnus);
         // check if the profil exist
-        if($alumnus->id_profil== null){
+        if($alumnus->id_profil== 0){
            $alum->new_profil();
         }else{
-            $alum->edit($alumnus->id_profil);
+            $profil =$pdo->getAlumnus($alumnus->id_profil);
+            
+            $pdo->edit($alumnus->id_profil);
         }
 
      
     }
 }
 
-echo "<pre>";
-print_r($alumnus);
-echo "</pre>";
 require_once("../views/validateData.php");
 ?>
