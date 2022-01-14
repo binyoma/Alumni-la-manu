@@ -35,12 +35,9 @@
                             </div>
                              <!-- Bouton Submit-->
                             <div class="my-3">
-                                <button type="submit" class="btn-primary btn-outline-white">Se connecter</button>
+                                <button type="submit" class="btn btn-secondary">Se connecter</button>
                             </div>
                         </form>
-						</div>
-						<div class="card-footer">
-							Card footer?
 						</div>
 					</div>
 				</div>

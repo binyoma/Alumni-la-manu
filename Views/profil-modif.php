@@ -3,7 +3,7 @@ require_once('../Controllers/ModifProfilController.php');
 ?>
     <div class="container mt-5">
         <div class="row">
-            <div class="card-title py-5">
+            <div class="card-title titre py-5">
                 <h2>Modifiez votre profil</h2>
             </div>
         </div>
@@ -97,7 +97,7 @@ require_once('../Controllers/ModifProfilController.php');
                 </div>
                 <!-- Bouton Submit-->
                 <div class="my-3">
-                    <button type="submit"  name="modif" class="btn btn-outline-info">Envoyer</button>
+                    <button type="submit"  name="modif" class="btn btn-outline-secondary">Envoyer</button>
                 </div>
             </form>
         </div>

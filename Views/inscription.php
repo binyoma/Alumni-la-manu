@@ -10,7 +10,7 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="card-title py-5">
+            <div class="card-title titre py-5">
                 <h2>Inscrivez-vous</h2>
             </div>
         </div>
@@ -101,7 +101,7 @@
                 </div>
                 <!-- Bouton Submit-->
                 <div class="my-3">
-                    <button type="submit" class="btn btn-outline-info">Envoyer</button>
+                    <button type="submit" class="btn btn-outline-secondary">Envoyer</button>
                 </div>
             </form>
         </div>

@@ -40,18 +40,18 @@
         </div>
     </div>
 
-    <div class="row bg-dark fixed-bottom">
+    <div class="row fondheader fixed-bottom">
         <div class="col justify-content-center mx-auto d-flex justify-content-around">
             <!-- Vertically centered scrollable modal for legal content -->
             <!-- Button trigger modal legal content-->
-            <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalLegalContent">
+            <button type="button" class="btn bg-transparent text-white btn-sm" data-bs-toggle="modal" data-bs-target="#modalLegalContent">
                 Mentions légales
             </button>
             <!-- Button trigger modal Team-->
-            <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalTeam">
+            <button type="button" class="btn bg-transparent text-white btn-sm" data-bs-toggle="modal" data-bs-target="#modalTeam">
                 Qui sommes-nous?
             </button>
-            <p class="text-white"><small class="fw-lighter">© La Manu 2021</small>1</p>
+            <p class="text-white"><small>© La Manu 2021</small></p>
         </div>
     </div>
 </footer>

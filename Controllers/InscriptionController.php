@@ -39,6 +39,4 @@ $profil = new Alumni ( $_POST['lastname'],
 
  $new_profil = $profil->new_alumni();
 
- 
-
 ?>

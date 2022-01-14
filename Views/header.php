@@ -17,7 +17,7 @@ for ($i = 0; $i <= count($parts) - 1; $i++) {
         $i = count($parts) ;
     }
 }
-echo 'root directory : ' .$dir_root. '<br>';
+//echo 'root directory : ' .$dir_root. '<br>';
 ?>
 
 <!DOCTYPE html>
@@ -33,13 +33,12 @@ echo 'root directory : ' .$dir_root. '<br>';
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="http://<?=$dir_root?>Alumni-la-manu/assets/CSS/style.css">
 </head>
 <body>
     <header>
-<div class="fondheader text-white">
-  <!--<img src="../assets/images/studying_crop.jpeg" class="card-img" alt="...">-->
-  <div class="card-title p-5">
+<div class="fondheader">
+  <div class="card-title p-5 titre m-0 text-white">
     <h1>ALUMNI <small
                 class="fw-lighter"> La Manu</small></h1>   
   </div>
@@ -78,7 +77,7 @@ echo 'root directory : ' .$dir_root. '<br>';
                 <li class="nav-item">
                     <a class="nav-link active text-light fw-light py-0" aria-current="page"
 
-                        href="http://<?=$dir_root?>Alumni-la-manu/Views/login.php">connexion</a>
+                        href="http://<?=$dir_root?>Alumni-la-manu/Views/login.php">Connexion</a>
 
                 </li>
             </ul>
