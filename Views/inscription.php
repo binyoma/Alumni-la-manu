@@ -1,7 +1,7 @@
 <?php include_once('header.php');?> 
 <?php
-print_r($_POST);
-print_r($_FILES);
+//print_r($_POST);
+//print_r($_FILES);
 
 
 
@@ -18,9 +18,8 @@ print_r($_FILES);
             <!--<form class="row g-5" action="InscriptionController.php" method="POST" enctype="multipart/form-data">-->
             <form class="row g-5" action="../Controllers/InscriptionController.php" method="POST" enctype="multipart/form-data">
                 <!-- Champ Nom-->
-                 
-                 <div class="col-md-6 mb-3">
-                    <label for="alias" class="form-label">Nom</label>
+                <div class="col-md-6 mb-3">
+                    <label for="lastname" class="form-label">Nom</label>
                     <input type="text" class="form-control form-control-sm" name="lastname" id="lastname" placeholder="">
                 </div>
                 <!-- Champ prénom-->

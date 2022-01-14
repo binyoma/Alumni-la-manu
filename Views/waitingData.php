@@ -16,6 +16,7 @@
                     <th scope="col">Alias</th>
                     <th scope="col">Email</th>
                     <th scope="col">Password</th>
+                    <th scope="col">Campus</th>
                     <th scope="col">Promo</th>
                     <th scope="col">Start</th>
                     <th scope="col">End</th>

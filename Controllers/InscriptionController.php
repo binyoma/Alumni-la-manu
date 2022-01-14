@@ -23,7 +23,8 @@ $profil = new Alumni ( $_POST['lastname'],
                              $_POST['firstname'],
                              $_POST['alias'],
                              $_POST['email'],
-                             $_POST['password'],
+                             // hashing the password
+                             password_hash($_POST['password']),
                              $_POST['campus'], 
                              $_POST['promo'], 
                              $_POST['date_start'], 
@@ -34,6 +35,8 @@ $profil = new Alumni ( $_POST['lastname'],
                              0
                             );
 //var_dump($profil);
+// TO Do check if the email is not already in database
+
  $new_profil = $profil->new_alumni();
 
  

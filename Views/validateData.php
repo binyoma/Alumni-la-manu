@@ -1,6 +1,7 @@
 <?php include_once('header.php');?> 
 <div class="container">
     <div class="row">
+        <h1>Voudriez-vous vraiment valider ces données?</h1>
         <ul>
             <li>Nom : <?=$alumnus->lastname?></li>
             <li>Prénom : <?=$alumnus->firstname?></li>
@@ -29,7 +30,7 @@
          no
         </label>
     </div>
-    <button type="submit"></button>
+    <button type="submit">Validate</button>
     </form>
     </div>
 
