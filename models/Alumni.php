@@ -137,21 +137,8 @@ class Alumni {
     public function new_alumni(){
         try{
             $pdo=connexion();
-
-            $sql = "INSERT INTO attente(lastname,firstname,alias, email, password, campus, promo,date_start,date_end,github,photo,comment,id_profil)
-                    VALUES(:lastname, 
-                        :firstname,
-                            :alias,
-                            :email,
-                            :password,
-                            :campus,
-                            :promo,
-                            :date_start,
-                            :date_end,
-                            :github,
-                            :photo, 
-                            :comment, 
-                            :id_profil)";
+            $sql = "INSERT INTO attente(lastname, firstname, alias, email, password, campus, promo, date_start, date_end, github, photo, comment, id_profil)
+                    VALUES(:lastname, :firstname, :alias,:email,:password,:campus,:promo,:date_start,:date_end,:github,:photo, :comment, :id)";
     
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':lastname',$this->_lastname, PDO::PARAM_STR);
@@ -166,7 +153,7 @@ class Alumni {
             $stmt->bindParam(':github', $this->_github, PDO::PARAM_STR);
             $stmt->bindParam(':photo', $this->_photo, PDO::PARAM_STR);
             $stmt->bindParam(':comment', $this->_comment, PDO::PARAM_STR);
-            $stmt->bindParam(':id_profil', $id_profil, PDO::PARAM_INT);
+            $stmt->bindParam(':id', $this->_id_Profil, PDO::PARAM_STR);
             $stmt->execute();
 
             echo "données insérées <br>";

@@ -31,10 +31,10 @@ $pdo=connexion();
         
 
         if($modif==1){
-            header("Location: http://localhost:8888/PDO/Alumni-la-manu/Views/profil-modif.php?login=1&id=$test_id");
+            header("Location:../Views/profil-modif.php?login=1&id=$test_id");
         }else{
         //identifiant vérifié, on l'envoie dans la page de profil détail
-        header("Location: http://localhost:8888/PDO/Alumni-la-manu/Views/profil-details.php?login=1&id=$test_id");
+        header("Location: ../Views/profil-details.php?login=1&id=$test_id");
         //echo '<pre>';
         //print_r($profil);
         //echo '</pre>';
@@ -64,7 +64,7 @@ $pdo=connexion();
                     //echo '</pre>';
 
                     //admin vérifié, on l'envoie dans la page de waiting Data
-                    header("Location: http://localhost:8888/PDO/Alumni-la-manu/Views/waitingData.php");
+                    header("Location: ../Views/waitingData.php");
                 }else{
                 echo "Vos identifiants sont erronés!";
                 }

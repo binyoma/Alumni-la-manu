@@ -13,7 +13,7 @@ include_once('../Controllers/ProfilDetailsController.php');
         <div class="row">
         <div class="col">
             <div class="card d-flex mx-auto" style="width: 20rem;">
-                <img src="../assets/images/julie.jpeg" class= "img-fluid" alt="...">
+                <img src="../assets/images/<?=$alumnus->photo?>" class= "img-fluid" alt="...">
                 </div>
             </div>
             <div class="col">

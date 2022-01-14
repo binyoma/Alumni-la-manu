@@ -7,16 +7,17 @@ $url = $_SERVER['REQUEST_URI']; //returns the current URL
 //echo $url. '<br>';
 $parts = explode('/',$url);
 //echo 'part : ' .print_r($parts). '<br> counts parts : '.count($parts).'<br>';
-$dir_root = $_SERVER['SERVER_NAME']. ':8888';
+$dir_root = $_SERVER['SERVER_NAME'];
 //echo 'serveur name :' .$dir_root. '<br>';
 for ($i = 0; $i <= count($parts) - 1; $i++) {
-    if($parts[$i] != "Alumni-la-manu"){
+    $racine ="Alumni-la-manu";
+    if($parts[$i] != $racine ){
     $dir_root .= $parts[$i] . "/";
     }else{
         $i = count($parts) ;
     }
 }
-//echo 'root directory : ' .$dir_root. '<br>';
+echo 'root directory : ' .$dir_root. '<br>';
 ?>
 
 <!DOCTYPE html>

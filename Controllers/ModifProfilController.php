@@ -5,24 +5,26 @@ require_once("../models/Alumni.php");
 $id=$_GET['id'];
 $login=$_GET['login'];
 echo ' login : ' .$login. '<br>';
+if(isset($_POST["modif"])){
+    $lastname = $_POST['lastname'];
+    $firstname = $_POST['firstname'];
+    $alias = $_POST['alias'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $campus = $_POST['campus'];
+    $promo = $_POST['promo']; 
+    $date_start = $_POST['date_start'];
+    $date_end = $_POST['date_end']; 
+    $github = $_POST['github'];
+    $photo = $_FILES['photo']['name']; 
+    $comment = $_POST['comment'];
+    $id_profil = $_POST['id_profil'];
+    
+    echo "Valeur des POST<pre>";
+    var_dump($_POST);
+    echo "</pre>";
+}
 
-$lastname = $_POST['lastname'];
-$firstname = $_POST['firstname'];
-$alias = $_POST['alias'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$campus = $_POST['campus'];
-$promo = $_POST['promo']; 
-$date_start = $_POST['date_start'];
-$date_end = $_POST['date_end']; 
-$github = $_POST['github'];
-$photo = $_FILES['photo']['name']; 
-$comment = $_POST['comment'];
-$id_profil = $_POST['id_profil'];
-
-echo "Valeur des POST<pre>";
-var_dump($_POST);
-echo "</pre>";
 
 
 if(isset($_FILES['photo'])){
@@ -64,9 +66,9 @@ echo "</pre>";
                              $_POST['github'],
                              $_FILES['photo']['name'], 
                              $_POST['comment'], 
-                             $id_profil
+                             $_POST['id_profil']
                             );
-//var_dump($profil);
+var_dump($profil);
  $new_profil = $profil->new_alumni();
 }
 
