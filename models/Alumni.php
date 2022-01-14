@@ -39,97 +39,97 @@ class Alumni {
     }
 
     public function getLastname(){
-        return $this->$_lastname;
+        return $this->_lastname;
     }
 
     public function setLastname($lastname){
-        $this->$_lastname=$lastname;
+        $this->_lastname=$lastname;
     }
     public function getFirstname(){
-        return $this->$_firstname;
+        return $this->_firstname;
     }
     
     public function setFirstname($firstname){
-        $this->$_firstname=$firstname;
+        $this->_firstname=$firstname;
     }
 
     public function getAlias(){
-        return $this->$_alias;
+        return $this->_alias;
     }
     
     public function setAlias($alias){
-        $this->$_alias=$alias;
+        $this->_alias=$alias;
     }
     public function getEmail(){
-        return $this->$_email;
+        return $this->_email;
     }
     
     public function setEmail($email){
-        $this->$_email=$email;
+        $this->_email=$email;
     }
     public function getPassword(){
-        return $this->$_password;
+        return $this->_password;
     }
     
     public function setPassword($password){
-        $this->$_password=$password;
+        $this->_password=$password;
     }
     public function getCampus(){
-        return $this->$_campus;
+        return $this->_campus;
     }
     
     public function setCampus($campus){
-        $this->$_campus=$campus;
+        $this->_campus=$campus;
     }
     public function getPromo(){
-        return $this->$_promo;
+        return $this->_promo;
     }
     
     public function setPromo($promo){
-        $this->$_promo=$promo;
+        $this->_promo=$promo;
     }
     public function getDate_start(){
-        return $this->$_date_start;
+        return $this->_date_start;
     }
     
     public function setDate_start($date_start){
-        $this->$_date_start=$date_start;
+        $this->_date_start=$date_start;
     }
 
     public function getDate_end(){
-        return $this->$_date_end;
+        return $this->_date_end;
     }
     
     public function setDate_end($date_end){
-        $this->$_date_end=$date_end;
+        $this->_date_end=$date_end;
     }
     public function getGithub(){
-        return $this->$_github;
+        return $this->_github;
     }
     
     public function setGithub($github){
-        $this->$_github=$github;
+        $this->_github=$github;
     }
     public function getPhoto(){
-        return $this->$_photo;
+        return $this->_photo;
     }
     
     public function setPhoto($photo){
-        $this->$_photo=$photo;
+        $this->_photo=$photo;
     }
     public function getComment(){
-        return $this->$_comment;
+        return $this->_comment;
     }
     
     public function setComment($comment){
-        $this->$_comment=$comment;
+        $this->_comment=$comment;
     }
     public function getId_profil(){
-        return $this->$_id_profil;
+        return $this->_id_profil;
     }
     
     public function setId_profil($id_profil){
-        $this->$_id_profil=$id_profil;
+        $this->_id_profil=$id_profil;
     }
 
     

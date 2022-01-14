@@ -24,7 +24,7 @@ $profil = new Alumni ( $_POST['lastname'],
                              $_POST['alias'],
                              $_POST['email'],
                              // hashing the password
-                             password_hash($_POST['password'],PASSWORD_DEFAULT),
+                             password_hash($_POST['password'],PASSWORD_BCRYPT),
                              $_POST['campus'], 
                              $_POST['promo'], 
                              $_POST['date_start'], 

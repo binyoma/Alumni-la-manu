@@ -1,17 +1,49 @@
 <?php
 require_once("../utils/database.php");
 class Admin {
-    
-    private $_mail;
-    private $_mdp;
+    private $_lastname;
+    private $_firstname;
+    private $_email;
+    private $_password;
     
     private $_db;
 
     public function __construct(){
       
-       $this->_mail="";
-       $this->_mdp="";
+        $this->_lastname=" ";
+        $this->_firstname=" ";
+        $this->_mail=" ";
+        $this->_password=" ";
        $this->_db=connexion();
+    }
+
+    public function getLastname(){
+        return $this->_lastname;
+    }
+
+    public function setLastname($lastname){
+        $this->_lastname=$lastname;
+    }
+    public function getFirstname(){
+        return $this->_firstname;
+    }
+    
+    public function setFirstname($firstname){
+        $this->_firstname=$firstname;
+    }
+    public function getEmail(){
+        return $this->_email;
+    }
+    
+    public function setEmail($email){
+        $this->_email=$email;
+    }
+    public function getPassword(){
+        return $this->_password;
+    }
+    
+    public function setPassword($password){
+        $this->_password=$password;
     }
 
     public function getAllAlumni(){
@@ -77,10 +109,6 @@ class Admin {
             $stmt->bindParam(':photo', $photo, PDO::PARAM_STR);
             $stmt->bindParam(':comment', $comment, PDO::PARAM_STR);
             $stmt->bindParam(':id_profil', $id_profil, PDO::PARAM_INT);
-
-            echo "var dump de la requete<pre>";
-            var_dump($stmt);
-            echo "</pre>";
             $stmt->execute();
 
             echo "données insérées <br>";
@@ -127,6 +155,26 @@ class Admin {
             }
             catch(PDOException $e){
                 echo 'erreur d\'ajout : '. $e->getMessage();
+        }
+    }
+
+    public function new(){
+        try{
+            $pdo=connexion();
+            $sql = "INSERT INTO admin(lastname, firstname,  email, password)
+                VALUES(:lastname, :firstname, :email,:password)";
+            $stmt = $pdo->prepare($sql);
+            
+            $stmt->bindParam(':lastname',$this->_lastname, PDO::PARAM_STR);
+            $stmt->bindParam(':firstname',$this->_firstname, PDO::PARAM_STR);
+            $stmt->bindParam(':email',$this->_email, PDO::PARAM_STR);
+            $stmt->bindParam(':password', $this->_password, PDO::PARAM_STR);
+            $stmt->execute();
+    
+            echo "données insérées <br>";
+        }
+        catch(PDOException $e){
+            echo 'erreur d\'ajout : '. $e->getMessage();
         }
     }
 }
