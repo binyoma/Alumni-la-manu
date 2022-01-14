@@ -1,4 +1,6 @@
-<?php include_once('header.php');?>
+<?php include_once('header.php');
+include_once('../Controllers/ProfilDetailsController.php');
+?>
 
     <div class="container">
         <div class="row d-flex mx-auto">
@@ -27,9 +29,11 @@
             
         </div>
         <div class="row">
-        <div class="card-text text-center">
-                    <a class="text-secondary text-decoration-none"
-                    href="../Controllers/ProfilModifController.php?id=<?=$id?>">Modifier le profil <i
+
+        <div class="card-text px-5 py-3">
+                    <a class="text-danger text-decoration-none"
+                    href="../Views/Profil-modif.php?login=<?=$login?>&id=<?=$id?>">Modifier le profil <i
+
                     class="bi bi-arrow-right-circle"></i></a>
                 </div>
         </div>      
