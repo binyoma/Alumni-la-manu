@@ -44,13 +44,14 @@
         <div class="col justify-content-center mx-auto d-flex justify-content-around">
             <!-- Vertically centered scrollable modal for legal content -->
             <!-- Button trigger modal legal content-->
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalLegalContent">
+            <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalLegalContent">
                 Mentions légales
             </button>
             <!-- Button trigger modal Team-->
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalTeam">
+            <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalTeam">
                 Qui sommes-nous?
             </button>
+            <p class="text-white"><small class="fw-lighter">© La Manu 2021</small>1</p>
         </div>
     </div>
 </footer>

@@ -14,15 +14,20 @@
     <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
 <body>
-<!-- <div class="text-white">
-  <img src="../assets/images/studying_crop.jpeg" class="card-img" alt="...">
-  <div class="card-img-overlay">
-    <h1 class="card-title p-5 text-center">ALUMNI <small
+    <header>
+<div class="fondheader text-white">
+  <!--<img src="../assets/images/studying_crop.jpeg" class="card-img" alt="...">-->
+  <div class="card-title p-5">
+    <h1>ALUMNI <small
                 class="fw-lighter"> La Manu</small></h1>   
   </div>
-</div> -->
+</div>
+    </header>
+
 <!-- Barre de menu-->
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<!--<nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
+    <div class="container-fluid px-5">-->
+<nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
     <div class="container-fluid px-5">
         <!-- Accueil (icône)-->
         <a class="navbar-brand" href="../alumni-la-manu/index.php"><i

@@ -1,8 +1,13 @@
+.fondheader{
+    background:cadetblue;
+}
+
 .titre {
     font-family: 'Fredoka One', cursive!important;
-    color:maroon;
+    color:cadetblue;
 }
 
 .profil{
     font-family: 'Arapey', serif;
+    color:grey;
 }
