@@ -33,7 +33,7 @@ echo 'root directory : ' .$dir_root. '<br>';
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?=$dir_root?>/Alumni-la-manu/assets/CSS/style.css">
+    <link rel="stylesheet" href="../assets/CSS/style.css">
 </head>
 <body>
     <header>
