@@ -5,7 +5,7 @@ require_once("../utils/database.php");
 $email = $_POST['email'];
 $password = $_POST['password'];
 //echo 'email : ' .$email. ' et le mot de passe : ' .$password. '<br>';
-
+$modif = $_POST['modif'];
 
 try{//On se connecte d'abord au tableau profil et on vérife
 $pdo=connexion();
@@ -23,11 +23,16 @@ $pdo=connexion();
     
     //On vérifie si l'id profil existe. Si non, On vérifie si les données email/password existe dans le tableau admin
     if(isset($test_id)){
+
+        if($modif==1){
+            header("Location: http://localhost:8888/PDO/Alumni-la-manu/Views/profil-modif.php?login=1&id=$test_id");
+        }else{
         //identifiant vérifié, on l'envoie dans la page de profil détail
-        header("Location: http://localhost:8888/PDO/Alumni-la-manu/Views/profil-details.php?id=<?= $profil->id?>");
-        echo '<pre>';
-        print_r($profil);
-        echo '</pre>';
+        header("Location: http://localhost:8888/PDO/Alumni-la-manu/Views/profil-details.php?login=1&id=$test_id");
+        //echo '<pre>';
+        //print_r($profil);
+        //echo '</pre>';
+        }
     }
     
     else

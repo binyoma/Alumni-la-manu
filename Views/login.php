@@ -13,6 +13,9 @@
 						</h5>
 						<div class="card-body ">
                         <form action="../Controllers/LoginController.php" method="POST" >
+                            <!-- hidden input for modif-->
+                            <input type="hidden"  name="modif" id="modif" value="<?=$_GET['modif']?>">
+                        
                             <!-- Champ mail-->
                             <div class="row">
                                 <div class="col-md-8 mb-3">
