@@ -7,6 +7,7 @@ $alumnus=$pdo->getOneDataToValidate($id);
 if(isset($_POST["validate"])){
     // check if admin choose to validate
     if($_POST["validate"]=="yes"){
+        
         $alum =new Alumni($alumnus->lastname,
             $alumnus->firstname,
             $alumnus->alias,
@@ -22,11 +23,14 @@ if(isset($_POST["validate"])){
             $alumnus->id_profil
             
         );
+        var_dump($alumnus);
         // check if the profil exist
-        if($alumnus->id_profil== null){
+        if($alumnus->id_profil== 0){
            $alum->new_profil();
         }else{
-            $alum->edit($alumnus->id_profil);
+            $profil =$pdo->getAlumnus($alumnus->id_profil);
+            
+            $pdo->edit($alumnus->id_profil);
         }
 
      
