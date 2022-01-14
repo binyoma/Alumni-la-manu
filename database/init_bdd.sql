@@ -80,4 +80,10 @@ INSERT INTO attente(lastname,firstname,alias, email, password, campus, promo,dat
         VALUES('Quintin', 'Kévin', 'quitin', 'quintinkevin@hotmail.fr',  'kevin','Amiens', 'promo', '2021-11-26', '2022-02-07','quintin', '<a href="./assets/img/photo_delime-codrin_kevin.jpg"></a>', 'à demander', null),
         ('Kessous', 'Jeremy', 'kjeremy', 'kessous.jeremy@hotmail.fr', 'laurent', 'Amiens', 'promo', '2021-11-26', '2022-02-07','kessous', '<a href="./assets/img/photo_villate_laurent.jpg"></a>', 'quitin', null);
 
+INSERT INTO `profils` (`id`, `lastname`, `firstname`, `alias`, `email`, `password`, `campus`, `promo`, `date_start`, `date_end`, `github`, `photo`, `comment`) VALUES
+(1, 'Dupont', 'Julie', 'julie2021', 'julie@gmail.com', 'juju', 'Amiens', 'CDA', '2021-11-26', '2022-02-07', 'julied001', 'julie.jpeg', 'Julie est passionné de jardinage.'),
+(2, 'Villate', 'Laurent', 'Le_prof', 'villate.laurent@hotmail.fr', 'laurent', 'Le Havre', 'DWWM', '2021-11-26', '2022-02-07', 'vill001', 'laurent.jpeg', 'Le professionnel'),
+(3, 'Binyoma', 'Innocent', 'G_pas_idée', 'binyoma.innocent@hotmail.fr', 'innocent', 'Amiens', 'CDA', '2021-11-26', '2022-02-07', 'bin001', 'innocent.jpeg', 'Il a attrapé le COVID'),
+(4, 'Durant', 'Julien', 'julie2021', 'julie@gmail.com', 'juju', 'Versailles', 'CDA', '2021-11-26', '2022-02-07', 'julied001', 'julien.jpeg', 'Julien est passionné de code.'),
+(5, 'Toto', 'Titi', 'titi2021', 'titi@gmail.com', 'juju', 'Le Havre', 'CDA', '2021-11-26', '2022-02-07', 'titicodfe', 'titi.jpeg', 'Titi est passionné de code.');
 
