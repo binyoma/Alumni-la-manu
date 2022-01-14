@@ -166,7 +166,7 @@ class Alumni {
             $stmt->bindParam(':github', $this->_github, PDO::PARAM_STR);
             $stmt->bindParam(':photo', $this->_photo, PDO::PARAM_STR);
             $stmt->bindParam(':comment', $this->_comment, PDO::PARAM_STR);
-            $stmt->bindParam(':id_profil', $this->_id_profil, PDO::PARAM_INT);
+            $stmt->bindParam(':id_profil', $id_profil, PDO::PARAM_INT);
             $stmt->execute();
 
             echo "données insérées <br>";

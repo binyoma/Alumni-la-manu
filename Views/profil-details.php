@@ -33,7 +33,7 @@ include_once('../Controllers/ProfilDetailsController.php');
         <div class="row">
         <div class="card-text px-5 py-3">
                     <a class="text-danger text-decoration-none"
-                    href="../Controllers/ProfilModifController.php?id=<?=$id?>">Modifier le profil <i
+                    href="../Views/Profil-modif.php?login=<?=$login?>&id=<?=$id?>">Modifier le profil <i
                     class="bi bi-arrow-right-circle"></i></a>
                 </div>
         </div>      
