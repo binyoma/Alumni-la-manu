@@ -8,5 +8,8 @@
         <h3>Partageons nos expériences</h3>
         </div>
     </div>
+    <div>
+         <img src="assets/images/studying_crop.jpeg" class="card-img" alt="...">
+    </div>
 </body>
 <?php include_once('views/footer.php'); ?>
