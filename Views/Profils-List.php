@@ -13,7 +13,7 @@
                 <form class="d-flex ms-auto" action="ProfilSearchController.php" method="POST">
                     <button type="submit" class="btn btn-info btn-sm"><i class="bi bi-search"></i></button>
                     <input type="text" class="form-control form-control-sm" id="keyword" name="keyword"
-                        placeholder="Rechercher un alumni">
+                        placeholder="Rechercher">
                 </form>
             </div>
         </nav>
