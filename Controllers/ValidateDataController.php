@@ -19,12 +19,9 @@ if(isset($_POST["validate"])){
             $alumnus->github,
             $alumnus->photo,
             $alumnus->comment,
-            0
+            $alumnus->id_profil
+            
         );
-
-        echo "<pre>";
-print_r($alum);
-echo "</pre>";
         // check if the profil exist
         if($alumnus->id_profil== null){
            $alum->new_profil();
@@ -36,8 +33,5 @@ echo "</pre>";
     }
 }
 
-echo "<pre>";
-print_r($alumnus);
-echo "</pre>";
 require_once("../views/validateData.php");
 ?>

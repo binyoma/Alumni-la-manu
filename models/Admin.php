@@ -77,10 +77,6 @@ class Admin {
             $stmt->bindParam(':photo', $photo, PDO::PARAM_STR);
             $stmt->bindParam(':comment', $comment, PDO::PARAM_STR);
             $stmt->bindParam(':id_profil', $id_profil, PDO::PARAM_INT);
-
-            echo "var dump de la requete<pre>";
-            var_dump($stmt);
-            echo "</pre>";
             $stmt->execute();
 
             echo "données insérées <br>";
